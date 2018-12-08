@@ -54,7 +54,7 @@ ol, ul {
 }
 .game-mode {
     border: none;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 .game-mode:focus {
     outline: none;

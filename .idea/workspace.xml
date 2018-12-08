@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8d5aac2-b13b-498b-b165-ffb39dce3097" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/docs/asset-manifest.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/manifest.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/precache-manifest.e65790f7bdcdd27f2bf2d9e60e6516df.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/service-worker.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/main.1efcfed6.chunk.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/main.1efcfed6.chunk.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/1.2e41c8ab.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/1.2e41c8ab.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/main.e2bd3877.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/main.e2bd3877.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/runtime~main.229c360f.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/runtime~main.229c360f.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
       <change beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,8 +20,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="315">
+              <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -44,8 +30,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="93" column="9" lean-forward="false" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+            <state relative-caret-position="647">
+              <caret line="193" column="13" lean-forward="false" selection-start-line="193" selection-start-column="13" selection-end-line="193" selection-end-column="13" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -67,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+              <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -81,8 +67,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
@@ -182,12 +168,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544215272677</updated>
       <workItem from="1544215274529" duration="7322000" />
-      <workItem from="1544225592225" duration="13978000" />
+      <workItem from="1544225592225" duration="18116000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21300000" />
+    <option name="totallyTimeSpent" value="25438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="984" y="23" width="997" height="1129" extended-state="0" />
@@ -242,24 +228,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js" />
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="93" column="9" lean-forward="false" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -268,10 +236,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="193" column="13" lean-forward="false" selection-start-line="193" selection-start-column="13" selection-end-line="193" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+          <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
           <folding />
         </state>
       </provider>

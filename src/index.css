@@ -63,3 +63,33 @@ ol, ul {
     background-color: red;
     color: white;
 }
+
+@media only screen and (max-width: 1000px) {
+    .square {
+        background: #fff;
+        border: 1px solid #999;
+        float: left;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 40px;
+        height: 40px;
+        margin-right: -1px;
+        margin-top: -1px;
+        padding: 0;
+        text-align: center;
+        width: 40px;
+        color: #555;
+    }
+    .game-info-announcement{
+        font-size: 20px;
+    };
+    .game-board{
+        width: 100vw;
+    }
+    .board-row{
+        margin-left: calc(50vw - 80px);
+    }
+    .game {
+        flex-direction: column;
+    }
+}

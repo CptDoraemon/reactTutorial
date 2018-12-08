@@ -52,12 +52,15 @@ class Game extends React.Component {
             }],
             xIsNext: true,
             winner: null,
-            gameMode: 'ai'
+            gameMode: 'ai',
+            humanWin: false,
+            aiWin: false,
         };
     }
 
     handleClick(i) {
         if (this.state.gameMode === 'human') {
+            // 2 players
             const history = this.state.history;
             const current = history[history.length - 1];
             const squares = [...current.squares];
@@ -69,27 +72,37 @@ class Game extends React.Component {
                 winner: calculateWinner(squares),
             });
         } else {
+            // play with AI
             const history = this.state.history;
             const current = history[history.length - 1];
             const squares = [...current.squares];
-            if (this.state.winner || squares[i]) return;
+            if (this.state.aiWin || this.state.humanWin || squares[i]) return;
             squares[i] = 'X';
 
+            //human win
             if (calculateWinner(squares)) {
                 this.setState({
+                    humanWin: true,
                     history: history.concat([{squares: squares}]),
-                    winner: calculateWinner(squares),
                 });
             } else {
                 const aiPossibleSteps = [];
                 squares.map((i, index) => !i ? aiPossibleSteps.push(index) : null);
                 const aiNextStep = aiPossibleSteps[Math.floor(Math.random() * aiPossibleSteps.length)];
-                squares[aiNextStep] = 'O'
+                squares[aiNextStep] = 'O';
 
-                this.setState({
-                    history: history.concat([{squares: squares}]),
-                    winner: calculateWinner(squares),
-                });
+                //AI win
+                if (calculateWinner(squares)) {
+                    this.setState({
+                        aiWin: true,
+                        history: history.concat([{squares: squares}]),
+                    })
+                } else {
+                    this.setState({
+                        history: history.concat([{squares: squares}]),
+                    })
+                }
+
             }
         }
     }
@@ -99,18 +112,24 @@ class Game extends React.Component {
             history: this.state.history.slice(0, historyIndex + 1),
             xIsNext: historyIndex % 2 === 0 ? false : true,
             winner: null,
+            aiWin: false,
+            humanWin: false
         })
     }
     toggleGameMode() {
         const newGameMode = this.state.gameMode === 'ai' ? 'human' : 'ai';
-        this.setState({
-            history: [{
-                squares: Array(9).fill(null),
-            }],
-            gameMode: newGameMode,
-            winner: null,
-            xIsNext: true
-       });
+        this.setState(
+            {
+                history: [{
+                    squares: Array(9).fill(null),
+                }],
+                xIsNext: true,
+                winner: null,
+                gameMode: newGameMode,
+                humanWin: false,
+                aiWin: false,
+            }
+        );
 
     };
 
@@ -131,9 +150,11 @@ class Game extends React.Component {
 
 
         let status;
-        if (this.state.gameMode === 'ai' && this.state.winner) {
-            status = 'You win!';
-        } else if (this.state.gameMode === 'ai' && !this.state.winner && current.indexOf(null) !== -1) {
+        if (this.state.aiWin) {
+            status = 'You Lost!';
+        } else if (this.state.humanWin) {
+            status = 'You Win!';
+        } else if (this.state.gameMode === 'ai' && !this.state.aiWin && !this.state.aiWin && current.indexOf(null) !== -1) {
             status ='';
         } else if (this.state.winner) {
             status = 'Winner: ' + this.state.winner;
@@ -158,7 +179,7 @@ class Game extends React.Component {
                     <button
                         className={this.state.gameMode === 'ai' ? 'game-mode button-active' : 'game-mode'}
                         onClick={() => this.toggleGameMode()}>
-                            Play with AI</button>
+                            Play with Artificial Dumb Dumb</button>
                     <div className='game-info-announcement' style={this.state.winner ? {color: 'red'} : null}>{status}</div>
                     <ol>{moves}</ol>
                 </div>
@@ -194,3 +215,4 @@ function calculateWinner(squares) {
         ) return squares[a];
     } return null;
 }
+

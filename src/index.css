@@ -44,10 +44,11 @@ ol, ul {
 .game {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .game-info {
-    margin-left: 20px;
+    margin-left: 40px;
 }
 .game-info-announcement{
     font-size: 36px;
@@ -86,10 +87,13 @@ ol, ul {
     .game-board{
         width: 100vw;
     }
-    .board-row{
-        margin-left: calc(50vw - 80px);
-    }
+
     .game {
         flex-direction: column;
+        align-items: center;
+    }
+    .game-info {
+        margin-left: 0px;
+        margin-top: 20px;
     }
 }

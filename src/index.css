@@ -19,17 +19,18 @@ ol, ul {
 
 .square {
     background: #fff;
-    border: 1px solid #999;
+    border: 2px solid #999;
     float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
+    font-size: 200px;
+    font-weight: normal;
+    line-height: 200px;
+    height: 200px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 34px;
+    width: 200px;
+    color: #555;
 }
 
 .square:focus {
@@ -47,4 +48,18 @@ ol, ul {
 
 .game-info {
     margin-left: 20px;
+}
+.game-info-announcement{
+    font-size: 36px;
+}
+.game-mode {
+    border: none;
+    background-color: white;
+}
+.game-mode:focus {
+    outline: none;
+}
+.button-active{
+    background-color: red;
+    color: white;
 }

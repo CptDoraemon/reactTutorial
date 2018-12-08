@@ -133,7 +133,7 @@ class Game extends React.Component {
         let status;
         if (this.state.gameMode === 'ai' && this.state.winner) {
             status = 'You win!';
-        } else if (this.state.gameMode === 'ai' && !this.state.winner) {
+        } else if (this.state.gameMode === 'ai' && !this.state.winner && current.indexOf(null) !== -1) {
             status ='';
         } else if (this.state.winner) {
             status = 'Winner: ' + this.state.winner;
